@@ -5,8 +5,14 @@ import ArrayData from "./DisplayData/ArrayData";
 
 import PrimitiveData from "./Props/PrimitiveData";
 
+import MiniProject from "./MiniProject";
+
+import "./css.css";
+
+import "./mycss/main.css";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <PrimitiveData />
+    <MiniProject />
   </StrictMode>
 );
