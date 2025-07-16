@@ -1,18 +1,40 @@
 function Buttons() {
-  const printDate = () => {};
-  const clicked = () => {};
-  const alertDate = () => {};
+  const printDate = () => {
+    let date = new Date();
+    console.log(date);
+  };
+  const clicked = (e) => {
+    console.log(e);
+    console.log("Button Clicked");
+  };
+  const alertDate = () => {
+    let date = new Date();
+    console.log(date);
+    alert(date);
+  };
+
+  function mouseIn() {
+    console.log("Mouse here");
+  }
 
   return (
     <div>
       <p>
-        <button>Click Me</button>
+        <button onMouseEnter={mouseIn} onClick={clicked}>
+          Click Me
+        </button>
       </p>
       <p>
-        <button>Print Date</button>
+        <button
+          onClick={() => {
+            printDate();
+          }}
+        >
+          Print Date
+        </button>
       </p>
       <p>
-        <button>Alert Date</button>
+        <button onClick={alertDate}>Alert Date</button>
       </p>
     </div>
   );
